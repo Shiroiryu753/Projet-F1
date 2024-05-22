@@ -9,6 +9,6 @@ Le site abodera les points suivant :
 ## __Une page dédiée à des écurires__
 
 - Page dédiée à l'écurie Redbull Racing Team
-- Page dédiée à l'écurie
-- Page dédiée à l'écurie
+- Page dédiée à l'écurie Aston Martin
+- Page dédiée à l'écurie Ferrari
 - Page dédiée aux informations

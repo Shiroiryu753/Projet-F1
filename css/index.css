@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "F1bold";
+    src: url("../fonts/Formula1-Bold.ttf");
+}
+@font-face {
+    font-family: "F1regular";
+    src: url("../fonts/Formula1-Regular.ttf");
+}
+body {
+    margin: 0;
+    font-family: "Calibri", "Arial", sans-serif;
+    font-size: 1.2rem;
+    background-color: (255,255,255);
+    color: rgb(251, 251, 251);
+}
+
+#banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Espace entre les éléments pour les positionner */
+    background-color: #FF1E00;
+    background-size: cover;
+    height: 100px; /* Diminuez la hauteur de la bannière */
+    padding: 10px 20px; /* Ajustez le padding pour réduire la taille */
+}
+
+#logo-container {
+    display: flex;
+    justify-content: flex-start; /* Positionne le logo à gauche */
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+#banner a {
+    padding: 0.5em 1rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#logo {
+    width: 150px; /* Réduisez la taille du logo si nécessaire */
+    max-width: 100%;
+    height: auto;
+}
+
+#navtop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centre les liens de navigation */
+    margin-top: 0; /* Ajustez l'espace selon vos besoins */
+    width: 100%;
+}
+
+#navtop a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px; /* Ajoute de l'espace entre les liens de navigation */
+}
+
+/* Media query pour les appareils avec une largeur maximale de 1024px */
+@media screen and (max-width: 1024px) {
+    #banner {
+        flex-direction: column;
+        align-items: center; /* Centre les éléments horizontalement */
+        height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
+        padding: 10px 0; /* Réduisez le padding pour les petits appareils */
+    }
+    
+    #logo-container {
+        justify-content: center; /* Centre le logo sur les petits appareils */
+        text-align: center;
+    }
+
+    #navtop {
+        flex-direction: column;
+        align-items: center; /* Centre les liens de navigation */
+        margin-top: 10px; /* Réduit l'espace entre le logo et la navigation */
+    }
+
+    #navtop a {
+        margin: 5px 0; /* Ajoute de l'espace entre les liens de navigation */
+    }
+}
+
+/* Media query pour les appareils avec une largeur maximale de 900px */
+@media screen and (max-width: 900px) {
+    #banner {
+        flex-direction: column;
+        align-items: center; /* Centre les éléments horizontalement */
+        height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
+        padding: 10px 0; /* Réduisez le padding pour les petits appareils */
+    }
+    
+    #logo-container {
+        justify-content: center; /* Centre le logo sur les petits appareils */
+        text-align: center;
+    }
+
+    #navtop {
+        flex-direction: column;
+        align-items: center; /* Centre les liens de navigation */
+        margin-top: 10px; /* Réduit l'espace entre le logo et la navigation */
+    }
+
+    #navtop a {
+        margin: 5px 0; /* Ajoute de l'espace entre les liens de navigation */
+    }
+}
+
+/* Media query pour les appareils avec une largeur minimale de 1024px */
+@media screen and (min-width: 1024px) {
+    #logo-container {
+        justify-content: flex-start; /* Positionne le logo à gauche */
+        text-align: left;
+        flex: 1;
+    }
+
+    #navtop {
+        justify-content: center; /* Centre les liens de navigation */
+        flex: 2;
+    }
+}

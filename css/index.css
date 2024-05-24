@@ -11,7 +11,7 @@ body {
     font-family: "Calibri", "Arial", sans-serif;
     font-size: 1.2rem;
     background-color: (255,255,255);
-    color: rgb(251, 251, 251);
+    color: rgb(0, 0, 0);
 }
 
 #banner {
@@ -57,31 +57,6 @@ body {
     color: #ffffff;
     text-decoration: none;
     margin: 0 10px; /* Ajoute de l'espace entre les liens de navigation */
-}
-
-/* Media query pour les appareils avec une largeur maximale de 1024px */
-@media screen and (max-width: 1024px) {
-    #banner {
-        flex-direction: column;
-        align-items: center; /* Centre les éléments horizontalement */
-        height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
-        padding: 10px 0; /* Réduisez le padding pour les petits appareils */
-    }
-    
-    #logo-container {
-        justify-content: center; /* Centre le logo sur les petits appareils */
-        text-align: center;
-    }
-
-    #navtop {
-        flex-direction: column;
-        align-items: center; /* Centre les liens de navigation */
-        margin-top: 10px; /* Réduit l'espace entre le logo et la navigation */
-    }
-
-    #navtop a {
-        margin: 5px 0; /* Ajoute de l'espace entre les liens de navigation */
-    }
 }
 
 /* Media query pour les appareils avec une largeur maximale de 900px */

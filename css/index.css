@@ -6,28 +6,31 @@
     font-family: "F1regular";
     src: url("../fonts/Formula1-Regular.ttf");
 }
+
+/* Main */
 body {
     margin: 0;
-    font-family: "Calibri", "Arial", sans-serif;
+    font-family: "F1regular", "Arial", sans-serif;
     font-size: 1.2rem;
-    background-color: (255,255,255);
-    color: rgb(251, 251, 251);
+    background-color: #f2eeee;
+    color: #333;
 }
 
 #banner {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; /* Espace entre les éléments pour les positionner */
+    justify-content: space-between;
     background-color: #FF1E00;
     background-size: cover;
-    height: 100px; /* Diminuez la hauteur de la bannière */
-    padding: 10px 20px; /* Ajustez le padding pour réduire la taille */
+    height: 100px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #logo-container {
     display: flex;
-    justify-content: flex-start; /* Positionne le logo à gauche */
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     text-align: left;
@@ -37,10 +40,16 @@ body {
     padding: 0.5em 1rem;
     text-decoration: none;
     color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#banner a:hover {
+    color: #ffcccc;
 }
 
 #logo {
-    width: 150px; /* Réduisez la taille du logo si nécessaire */
+    width: 150px;
     max-width: 100%;
     height: auto;
 }
@@ -48,77 +57,146 @@ body {
 #navtop {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Centre les liens de navigation */
-    margin-top: 0; /* Ajustez l'espace selon vos besoins */
+    justify-content: center;
+    margin-top: 0;
     width: 100%;
 }
 
 #navtop a {
     color: #ffffff;
     text-decoration: none;
-    margin: 0 10px; /* Ajoute de l'espace entre les liens de navigation */
+    margin: 0 10px;
+    position: relative;
 }
 
-/* Media query pour les appareils avec une largeur maximale de 1024px */
-@media screen and (max-width: 1024px) {
-    #banner {
-        flex-direction: column;
-        align-items: center; /* Centre les éléments horizontalement */
-        height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
-        padding: 10px 0; /* Réduisez le padding pour les petits appareils */
-    }
-    
-    #logo-container {
-        justify-content: center; /* Centre le logo sur les petits appareils */
-        text-align: center;
-    }
-
-    #navtop {
-        flex-direction: column;
-        align-items: center; /* Centre les liens de navigation */
-        margin-top: 10px; /* Réduit l'espace entre le logo et la navigation */
-    }
-
-    #navtop a {
-        margin: 5px 0; /* Ajoute de l'espace entre les liens de navigation */
-    }
+#navtop a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* Media query pour les appareils avec une largeur maximale de 900px */
+#navtop a:hover::after {
+    width: 100%;
+}
+
+#intro {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #ffe6e6;
+    margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#deff1, #weekend-formats {
+    padding: 2rem 1rem;
+    background-color: #f2f2f2;
+    margin: 2rem 0;
+}
+
+#deff1 h2, #weekend-formats h2 {
+    color: #ff1e00;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#deff1 article, #weekend-formats article {
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+#deff1 article:hover, #weekend-formats article:hover {
+    transform: translateY(-5px);
+}
+
+.ecu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ecu a {
+    flex: 1 0 21%;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.ecu a img {
+    width: auto;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.ecu a:hover img {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
 @media screen and (max-width: 900px) {
     #banner {
         flex-direction: column;
-        align-items: center; /* Centre les éléments horizontalement */
-        height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
-        padding: 10px 0; /* Réduisez le padding pour les petits appareils */
+        align-items: center;
+        height: auto;
+        padding: 10px 0;
     }
     
     #logo-container {
-        justify-content: center; /* Centre le logo sur les petits appareils */
+        justify-content: center;
         text-align: center;
     }
 
     #navtop {
         flex-direction: column;
-        align-items: center; /* Centre les liens de navigation */
-        margin-top: 10px; /* Réduit l'espace entre le logo et la navigation */
+        align-items: center;
+        margin-top: 10px;
     }
 
     #navtop a {
-        margin: 5px 0; /* Ajoute de l'espace entre les liens de navigation */
+        margin: 5px 0;
+    }
+
+    .ecu a {
+        flex: 1 0 48%;
     }
 }
 
-/* Media query pour les appareils avec une largeur minimale de 1024px */
 @media screen and (min-width: 1024px) {
     #logo-container {
-        justify-content: flex-start; /* Positionne le logo à gauche */
+        justify-content: flex-start;
         text-align: left;
         flex: 1;
     }
 
     #navtop {
-        justify-content: center; /* Centre les liens de navigation */
+        justify-content: center;
         flex: 2;
+    }
+
+    .ecu a {
+        flex: 1 0 21%;
     }
 }

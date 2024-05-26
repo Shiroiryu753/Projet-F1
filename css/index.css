@@ -12,7 +12,7 @@ body {
     margin: 0;
     font-family: "F1regular", "Arial", sans-serif;
     font-size: 1.2rem;
-    background-color: #f2eeee;
+    background-color: #b9b9b9;
     color: #333;
 }
 
@@ -96,12 +96,12 @@ body {
 
 #deff1, #weekend-formats {
     padding: 2rem 1rem;
-    background-color: #f2f2f2;
+    background-color: #b9b9b9;
     margin: 2rem 0;
 }
 
 #deff1 h2, #weekend-formats h2 {
-    color: #ff1e00;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 1rem;
 }

@@ -1,0 +1,331 @@
+@font-face {
+    font-family: "F1bold";
+    src: url("../fonts/Formula1-Bold.ttf");
+}
+@font-face {
+    font-family: "F1regular";
+    src: url("../fonts/Formula1-Regular.ttf");
+}
+
+/* Main */
+body {
+    margin: 0;
+    font-family: "F1regular", "Arial", sans-serif;
+    font-size: 1.2rem;
+    background-color: #EF1A2D;
+    color: #333;
+}
+
+#banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FF1E00;
+    background-size: cover;
+    height: 100px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+#banner a {
+    padding: 0.5em 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#banner a:hover {
+    color: #000000;
+}
+
+#logo {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+}
+
+#navtop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+    width: 100%;
+}
+
+#navtop a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    position: relative;
+}
+
+#navtop a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#navtop a:hover::after {
+    width: 100%;
+}
+
+#intro {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #EF1A2D;
+    color: #000000;
+    margin: 2rem 0;
+}
+
+#deff1{
+    padding: 2rem 1rem;
+    background-color: #EF1A2D;
+    margin: 2rem 0;
+}
+
+#deff1 h2 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#deff1 article{
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+#deff1 article:hover{
+    transform: translateY(-5px);
+}
+
+#car {
+    padding: 2rem 1rem;
+    background-color: #EF1A2D;
+    margin: 2rem 0;
+}
+
+#car h2 {
+    color: #FFF200;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* General styling for the image slider */
+.image-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1024px;
+    height: 500px; /* Adjust height as needed */
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 15s infinite;
+    height: 100%;
+    color: #ffffff;
+}
+
+.slides img {
+    width: 33.333%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    33% {
+        transform: translateX(-33.333%);
+    }
+    66% {
+        transform: translateX(-66.666%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.car-description {
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    transition: transform 0.3s;
+}
+
+.car-description p {
+    margin-bottom: 1rem;
+}
+
+.car-description:hover {
+    transform: translateY(-5px);
+}
+
+#pilotes {
+    padding: 2rem 1rem;
+    background-color: #EF1A2D;
+    margin: 2rem 0;
+    text-align: center; /* Centrer le titre h2 */
+}
+
+#pilotes h2 {
+    text-align: center;
+    color: #00A551;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.pilotes-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pilote {
+    text-align: center;
+    margin-bottom: 2rem;
+    flex: 1 0 45%; /* adjust the width to your preference */
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.pilote h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.pilote p {
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.pilote p:hover {
+    transform: translateY(-5px);
+}
+
+.pilote figure {
+    display: inline-block;
+    margin: 0 auto 1rem auto;
+    padding: 0;
+    width: 200px; /* agrandir les cercles */
+    height: 200px; /* agrandir les cercles */
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.pilote figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* assure que l'image couvre toute la figure et reste alignée */
+    transition: transform 0.3s;
+}
+
+.pilote figure:hover img {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 900px) {
+    #banner {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    #logo-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #navtop {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    #navtop a {
+        margin: 5px 0;
+    }
+
+    .image-slider {
+        height: 300px; /* Adjust height as needed for smaller screens */
+    }
+
+    .slides img {
+        width: 33.333%;
+        height: 100%;
+    }
+    .pilotes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pilote {
+        flex: 1 0 100%; /* full width on smaller screens */
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #logo-container {
+        justify-content: flex-start;
+        text-align: left;
+        flex: 1;
+    }
+
+    #navtop {
+        justify-content: center;
+        flex: 2;
+    }
+    .image-slider {
+        max-width: 1024px;
+        height: 500px; /* Adjust height as needed */
+    }
+
+    .slides img {
+        width: 33.333%;
+        height: 100%;
+    }
+}

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/info.css">
-    <title>WikiFormule 1 : Informations</title>
-    <link rel="icon" href="../img/F1-Logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../index.css">
+    <title>WikiFormule 1</title>
+    <link rel="icon" href="img/F1-Logo.ico" type="image/x-icon">
 </head>
-<body>
+<body class="info">
     <header id="banner">
         <div id="logo-container">
             <a href="../index.html">
@@ -22,12 +22,55 @@
             <a href="info.html">Informations</a>
         </nav>
     </header>
-<body>
     <main>
+        <section id="intro" class="info">
+            <h1>Pages d'informations</h1>
+            <p>Pour plus d'informations sur le site, vous pouvez nous contacter en remplissant le formulaire suivant :</p>
+        </section>
+        <div class="contact-form-container">
+            <h2>Contactez-nous</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nom">Nom: </label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="sujet">Sujet: </label>
+                    <input type="text" id="sujet" name="sujet" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+        <div class="conteneur-infos">
+            <h2>Informations</h2>
+            <div class="infos-personnelles">
+                <h3>Nom</h3>
+                <p>Isembaert Nathan</p>
+            </div>
+            <div class="infos-personnelles">
+                <h3>Email</h3>
+                <p>nathan.isembaert@std.heh.be</p>
+            </div>
+            <div class="maquettes">
+                <h3>Maquettes Papier</h3>
+                <img src="path/to/your/image.jpg" alt="Maquettes Papier">
+                <img src="path/to/your/image.jpg" alt="Maquettes Papier">
+                <img src="path/to/your/image.jpg" alt="Maquettes Papier">
+                <img src="path/to/your/image.jpg" alt="Maquettes Papier">
+            </div>
+        </div>
     </main>
     <footer>
         <p>Toutes les images présentes sur ce site sont la propriété intellectuelle de la FIA Formula One World Championship et des différentes marques mentionnées.</p>
-        <p>Ce site a été crée par Nathan Isembaert.</p>
+        <p>Ce site a été créé par Nathan Isembaert.</p>
     </footer>
 </body>
-</html> 
+</html>

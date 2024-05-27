@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: "F1bold";
     src: url("../fonts/Formula1-Bold.ttf");
@@ -12,7 +13,7 @@ body {
     margin: 0;
     font-family: "F1regular", "Arial", sans-serif;
     font-size: 1.2rem;
-    background-color: #003b8e;
+    background-color: #b9b9b9;
     color: #333;
 }
 
@@ -89,56 +90,75 @@ body {
 #intro {
     text-align: center;
     padding: 2rem 1rem;
-    background-color: #003b8e;
-    color: #C0BFBF;
+    background-color: #ffe6e6;
     margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#deff1{
+#intro.info{
+    background-color: #ffffff;
+}
+
+#deff1, #weekend-formats, #car, #pilotes {
     padding: 2rem 1rem;
-    background-color: #003b8e;
+    background-color: #b9b9b9;
     margin: 2rem 0;
 }
 
-#deff1 h2 {
-    color: #000000;
+#deff1 h2, #weekend-formats h2, #car h2, #pilotes h2 {
+    color: #ffffff;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-#deff1 article{
+#deff1 article, #weekend-formats article, .car-description {
     background-color: #ffffff;
-    color: #000000;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
     transition: transform 0.3s;
 }
 
-#deff1 article:hover{
+#deff1 article:hover, #weekend-formats article:hover, .car-description:hover {
     transform: translateY(-5px);
 }
 
-#car {
-    padding: 2rem 1rem;
-    background-color: #003b8e;
-    margin: 2rem 0;
+.ecu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-#car h2 {
-    color: #E30118;
+.ecu a {
+    flex: 1 0 21%;
+    margin: 10px;
     text-align: center;
-    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
 }
 
-/* General styling for the image slider */
+.ecu a img {
+    width: auto;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.ecu a:hover img {
+    transform: scale(1.1);
+}
+
 .image-slider {
     width: 100%;
     overflow: hidden;
     position: relative;
     margin: 0 auto;
     max-width: 1024px;
-    height: 500px; /* Adjust height as needed */
+    height: 500px;
 }
 
 .slides {
@@ -170,37 +190,6 @@ body {
     }
 }
 
-.car-description {
-    background-color: #ffffff;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    transition: transform 0.3s;
-}
-
-.car-description p {
-    margin-bottom: 1rem;
-}
-
-.car-description:hover {
-    transform: translateY(-5px);
-}
-
-#pilotes {
-    padding: 2rem 1rem;
-    background-color: #003b8e;
-    margin: 2rem 0;
-    text-align: center; /* Centrer le titre h2 */
-}
-
-#pilotes h2 {
-    text-align: center;
-    color: #FDD900;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
 .pilotes-container {
     display: flex;
     flex-wrap: nowrap;
@@ -211,13 +200,13 @@ body {
 .pilote {
     text-align: center;
     margin-bottom: 2rem;
-    flex: 1 0 45%; /* adjust the width to your preference */
+    flex: 1 0 45%;
     box-sizing: border-box;
     padding: 1rem;
 }
 
 .pilote h3 {
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
@@ -237,8 +226,8 @@ body {
     display: inline-block;
     margin: 0 auto 1rem auto;
     padding: 0;
-    width: 200px; /* agrandir les cercles */
-    height: 200px; /* agrandir les cercles */
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -248,12 +237,21 @@ body {
 .pilote figure img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* assure que l'image couvre toute la figure et reste alignée */
+    object-fit: cover;
     transition: transform 0.3s;
 }
 
 .pilote figure:hover img {
     transform: scale(1.1);
+}
+
+.contact-form-container, .conteneur-infos {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 900px;
 }
 
 footer {
@@ -265,6 +263,7 @@ footer {
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Responsive adjustments */
 @media screen and (max-width: 900px) {
     #banner {
         flex-direction: column;
@@ -288,22 +287,37 @@ footer {
         margin: 5px 0;
     }
 
+    .ecu a {
+        flex: 1 0 48%;
+    }
+
     .image-slider {
-        height: 300px; /* Adjust height as needed for smaller screens */
+        height: 300px;
     }
 
     .slides img {
         width: 33.333%;
         height: 100%;
     }
+
     .pilotes-container {
         flex-direction: column;
         align-items: center;
     }
 
     .pilote {
-        flex: 1 0 100%; /* full width on smaller screens */
+        flex: 1 0 100%;
         max-width: 100%;
+    }
+
+    .contact-form-container, .conteneur-infos {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+    .contact-form-container, .conteneur-infos {
+        max-width: 80%;
     }
 }
 
@@ -318,13 +332,73 @@ footer {
         justify-content: center;
         flex: 2;
     }
+
+    .ecu a {
+        flex: 1 0 21%;
+    }
+
     .image-slider {
         max-width: 1024px;
-        height: 500px; /* Adjust height as needed */
+        height: 500px;
     }
 
     .slides img {
         width: 33.333%;
         height: 100%;
     }
+}
+
+/* Specific styles for different teams */
+body.aston-martin {
+    background-color: #037A68;
+    color: #000000;
+}
+
+body.ferrari {
+    background-color: #EF1A2D;
+}
+
+body.redbull {
+    background-color: #003b8e;
+}
+
+#intro.aston-martin {
+    background-color: #037A68;
+    color: #ffffff;
+}
+
+#deff1.aston-martin, #car.aston-martin, #pilotes.aston-martin {
+    background-color: #037A68;
+    color: #000000;
+}
+
+#intro.ferrari, #deff1.ferrari, #car.ferrari, #pilotes.ferrari {
+    background-color: #EF1A2D;
+    color: #000000;
+}
+
+#intro.redbull {
+    background-color: #003b8e;
+    color: #C0BFBF;
+}
+
+#deff1.redbull, #car.redbull, #pilotes.redbull {
+    background-color: #003b8e;
+    color: #000000;
+}
+
+#car h2.ferrari {
+    color: #FFF200;
+}
+
+#car h2.redbull {
+    color: #E30118;
+}
+
+#pilotes h2.ferrari {
+    color: #00A551;
+}
+
+#pilotes h2.redbull {
+    color: #FDD900;
 }

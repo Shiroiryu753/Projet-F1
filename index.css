@@ -262,6 +262,30 @@ body {
     max-width: 900px;
 }
 
+.maquettes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maquettes a {
+    width: 100%;
+    max-width: 700px; /* Réduction de la taille maximale */
+    margin: 10px 0;
+}
+
+.maquettes img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.maquettes img:hover {
+    transform: scale(1.05);
+}
 @media screen and (max-width: 900px) {
     #banner {
         flex-direction: column;
@@ -311,6 +335,9 @@ body {
     .contact-form-container, .conteneur-infos {
         width: 90%;
     }
+    .maquettes {
+        width: 90%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -337,6 +364,9 @@ body {
     .slides img {
         width: 33.333%;
         height: 100%;
+    }
+    .maquettes {
+        width: 90%;
     }
 }
 .contact-form-container, .conteneur-infos {

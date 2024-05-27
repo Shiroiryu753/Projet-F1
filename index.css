@@ -1,11 +1,11 @@
 /* Fonts */
 @font-face {
     font-family: "F1bold";
-    src: url("../fonts/Formula1-Bold.ttf");
+    src: url("fonts/Formula1-Bold.ttf");
 }
 @font-face {
     font-family: "F1regular";
-    src: url("../fonts/Formula1-Regular.ttf");
+    src: url("fonts/Formula1-Regular.ttf");
 }
 
 /* Main */
@@ -13,8 +13,8 @@ body {
     margin: 0;
     font-family: "F1regular", "Arial", sans-serif;
     font-size: 1.2rem;
-    background-color: #b9b9b9;
-    color: #333;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 #banner {
@@ -64,6 +64,7 @@ body {
 }
 
 #navtop a {
+    font-family: "F1bold", "Arial", sans-serif;
     color: #ffffff;
     text-decoration: none;
     margin: 0 10px;
@@ -101,12 +102,12 @@ body {
 
 #deff1, #weekend-formats, #car, #pilotes {
     padding: 2rem 1rem;
-    background-color: #b9b9b9;
+    background-color: #FF1E00;
     margin: 2rem 0;
 }
 
 #deff1 h2, #weekend-formats h2, #car h2, #pilotes h2 {
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -117,6 +118,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
     transition: transform 0.3s;
+    border-radius: 8px;
+}
+
+.car-description{
+    margin-top: 15px;
 }
 
 #deff1 article:hover, #weekend-formats article:hover, .car-description:hover {
@@ -206,7 +212,7 @@ body {
 }
 
 .pilote h3 {
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -216,6 +222,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
     transition: transform 0.3s;
+    border-radius: 8px;
 }
 
 .pilote p:hover {
@@ -246,7 +253,8 @@ body {
 }
 
 .contact-form-container, .conteneur-infos {
-    background-color: #ffffff;
+    background-color: #e11a00;
+    color: #ededed;
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -254,16 +262,6 @@ body {
     max-width: 900px;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #000000;
-    color: #fff;
-    margin-top: 2rem;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive adjustments */
 @media screen and (max-width: 900px) {
     #banner {
         flex-direction: column;
@@ -315,12 +313,6 @@ footer {
     }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1024px) {
-    .contact-form-container, .conteneur-infos {
-        max-width: 80%;
-    }
-}
-
 @media screen and (min-width: 1024px) {
     #logo-container {
         justify-content: flex-start;
@@ -347,8 +339,21 @@ footer {
         height: 100%;
     }
 }
+.contact-form-container, .conteneur-infos {
+    max-width: 80%;
+}
 
-/* Specific styles for different teams */
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Couleurs ecuries */
 body.aston-martin {
     background-color: #037A68;
     color: #000000;
